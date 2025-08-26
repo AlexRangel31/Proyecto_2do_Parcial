@@ -1,0 +1,29 @@
+@startuml
+title Agenda de Contactos - Diagrama de Clases
+
+class Contacto {
+  - nombre : String
+  - telefono : String
+  + mostrar_info() : String
+}
+
+class Amigo {
+  - apodo : String
+  + mostrar_info() : String
+}
+
+class Familiar {
+  - parentesco : String
+  + mostrar_info() : String
+}
+
+class Trabajo {
+  - empresa : String
+  + mostrar_info() : String
+}
+
+Contacto <|-- Amigo
+Contacto <|-- Familiar
+Contacto <|-- Trabajo
+
+@enduml
